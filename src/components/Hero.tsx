@@ -12,6 +12,9 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 text-center">
+        <p className="text-xl md:text-2xl text-white mb-8 font-medium max-w-3xl">
+          A High-Altitude Mountain Road Race in the<br />Shadow of the Dhauladhars
+        </p>
         <button className="bg-white/30 backdrop-blur-md hover:bg-white/40 text-white font-bold px-16 py-5 text-xl rounded-full border border-white/30 transition-all">
           Be Part of the Adventure
         </button>
