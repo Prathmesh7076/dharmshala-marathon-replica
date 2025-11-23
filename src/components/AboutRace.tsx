@@ -33,10 +33,16 @@ const AboutRace = () => {
             </p>
 
             <div className="flex gap-4">
-              <Button className="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-6 text-lg rounded-full border-2 border-white/30">
+              <Button 
+                onClick={() => window.location.href = '/register'}
+                className="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-6 text-lg rounded-full border-2 border-white/30"
+              >
                 Register Now
               </Button>
-              <Button className="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-6 text-lg rounded-full border-2 border-white/30">
+              <Button 
+                onClick={() => window.location.href = '/register'}
+                className="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-6 text-lg rounded-full border-2 border-white/30"
+              >
                 Join the Race
               </Button>
             </div>

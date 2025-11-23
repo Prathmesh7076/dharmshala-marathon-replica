@@ -149,7 +149,10 @@ const RaceDistances = () => {
                         </div>
                       </div>
                       
-                      <Button className="bg-accent hover:bg-accent/90 text-foreground font-bold py-6 rounded-full">
+                      <Button 
+                        onClick={() => window.location.href = '/register'}
+                        className="bg-accent hover:bg-accent/90 text-foreground font-bold py-6 rounded-full"
+                      >
                         Register Now
                       </Button>
                     </div>
