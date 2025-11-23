@@ -33,9 +33,11 @@ const Navigation = () => {
           </Link>
         </div>
 
-        <Button className="bg-accent hover:bg-accent/90 text-foreground font-bold px-8 py-6 text-lg rounded-full">
-          Register Now
-        </Button>
+        <Link to="/register">
+          <Button className="bg-accent hover:bg-accent/90 text-foreground font-bold px-8 py-6 text-lg rounded-full">
+            Register Now
+          </Button>
+        </Link>
       </div>
     </nav>
   );

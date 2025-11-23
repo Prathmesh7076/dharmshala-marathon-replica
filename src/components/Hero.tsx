@@ -11,12 +11,7 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 flex items-center justify-center min-h-screen px-8">
-        <div className="text-center max-w-6xl">
-          <h1 className="text-7xl md:text-9xl font-black text-white mb-8 tracking-tight leading-none">
-            DHARAMSHALA<br />
-            MARATHON 2025
-          </h1>
-        </div>
+        {/* Image already contains text */}
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">

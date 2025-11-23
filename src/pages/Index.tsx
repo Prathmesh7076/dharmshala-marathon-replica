@@ -17,9 +17,9 @@ const Index = () => {
       <Hero />
       <StatsBar />
       <AboutRace />
-      <MarathonMotion />
       <RaceDistances />
       <RouteMap />
+      <MarathonMotion />
       <ReadyToRace />
       <FAQ />
       <Sponsors />
