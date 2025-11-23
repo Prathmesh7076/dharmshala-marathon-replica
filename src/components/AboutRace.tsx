@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import aboutImage from "@/assets/about-trail.jpg";
+import raceImage from "@/assets/DM-01.png";
 
 const AboutRace = () => {
   return (
@@ -13,7 +14,7 @@ const AboutRace = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-3xl overflow-hidden">
             <img 
-              src={aboutImage}
+              src={raceImage}
               alt="Trail running in Dharamshala mountains"
               className="w-full h-[600px] object-cover"
             />
