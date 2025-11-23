@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ReadyToRace = () => {
   return (
-    <section className="relative h-screen flex items-center justify-end overflow-hidden">
+    <section className="relative h-[120vh] flex items-center justify-end overflow-hidden">
       <img 
         src={readyToRace}
         alt="Ready to Race the Mountains"
