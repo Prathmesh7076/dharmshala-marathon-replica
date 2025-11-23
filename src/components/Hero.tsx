@@ -1,5 +1,6 @@
 import heroImage from "@/assets/hero-runner.jpg";
 import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -15,9 +16,12 @@ const Hero = () => {
         <p className="text-xl md:text-2xl text-white mb-8 font-medium max-w-3xl">
           A High-Altitude Mountain Road Race in the<br />Shadow of the Dhauladhars
         </p>
-        <button className="bg-white/30 backdrop-blur-md hover:bg-white/40 text-white font-bold px-16 py-5 text-xl rounded-full border border-white/30 transition-all">
+        <Link 
+          to="/register"
+          className="bg-white/30 backdrop-blur-md hover:bg-white/40 text-white font-bold px-16 py-5 text-xl rounded-full border border-white/30 transition-all inline-block"
+        >
           Be Part of the Adventure
-        </button>
+        </Link>
       </div>
 
       {/* Carousel Dots */}
