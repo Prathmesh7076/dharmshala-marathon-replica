@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-transparent" />
       </div>
       
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-end min-h-screen px-8 pb-32 text-center">
         <p className="text-xl md:text-2xl text-white mb-8 font-medium max-w-3xl">
           A High-Altitude Mountain Road Race in the<br />Shadow of the Dhauladhars
         </p>
