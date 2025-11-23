@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -8,9 +9,7 @@ const Navigation = () => {
     <nav className="absolute top-0 left-0 right-0 z-50 px-8 py-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center">
-          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-            <span className="text-xs font-bold text-primary">LOGO</span>
-          </div>
+          <img src={logo} alt="Dharamshala Marathon Logo" className="w-20 h-20 object-contain" />
         </div>
         
         <div className="hidden md:flex items-center gap-8 bg-primary/30 backdrop-blur-md px-8 py-3 rounded-full border border-white/20">

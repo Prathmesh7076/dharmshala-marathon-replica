@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import socials from "@/assets/socials.png";
 
 const Footer = () => {
   return (
@@ -12,6 +13,9 @@ const Footer = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute bottom-8 left-8">
+          <img src={socials} alt="Social Media" className="w-32 h-auto" />
+        </div>
       </div>
       
       <div className="bg-[#1a1a2e] text-white py-8">
