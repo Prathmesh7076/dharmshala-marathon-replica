@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import aboutImage from "@/assets/about-trail.jpg";
 import raceImage from "@/assets/DM-01.png";
+import arrowDown from "@/assets/arrow-down.png";
 
 const AboutRace = () => {
   return (
@@ -52,9 +53,7 @@ const AboutRace = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <svg width="60" height="40" viewBox="0 0 60 40" fill="none" className="text-white">
-          <path d="M5 5L30 30L55 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        <img src={arrowDown} alt="Scroll down" className="w-16 h-16" />
       </div>
     </section>
   );

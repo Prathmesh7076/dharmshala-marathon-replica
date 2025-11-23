@@ -2,6 +2,7 @@ import readyToRace from "@/assets/ready-to-race-mountains.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import arrowDown from "@/assets/arrow-down.png";
 
 const ReadyToRace = () => {
   return (
@@ -22,6 +23,9 @@ const ReadyToRace = () => {
             <ChevronDown className="w-6 h-6" />
           </Button>
         </Link>
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <img src={arrowDown} alt="Scroll down" className="w-16 h-16" />
       </div>
     </section>
   );
