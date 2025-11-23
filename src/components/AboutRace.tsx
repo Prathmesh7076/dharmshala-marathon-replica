@@ -3,7 +3,7 @@ import aboutImage from "@/assets/about-trail.jpg";
 
 const AboutRace = () => {
   return (
-    <section className="bg-dark-bg py-20 relative overflow-hidden">
+    <section id="about" className="bg-dark-bg py-20 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: `url(${aboutImage})` }}

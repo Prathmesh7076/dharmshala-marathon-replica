@@ -16,16 +16,43 @@ const Navigation = () => {
           <Link to="/" className={`font-medium transition-colors ${location.pathname === '/' ? 'text-accent' : 'text-white hover:text-accent'}`}>
             Home
           </Link>
-          <a href="/#about" className="text-white/80 font-medium hover:text-white transition-colors">
+          <a 
+            href="/#about" 
+            onClick={(e) => {
+              if (location.pathname === '/') {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="text-white/80 font-medium hover:text-white transition-colors cursor-pointer"
+          >
             About
           </a>
-          <a href="/#race" className="text-white/80 font-medium hover:text-white transition-colors">
+          <a 
+            href="/#race" 
+            onClick={(e) => {
+              if (location.pathname === '/') {
+                e.preventDefault();
+                document.getElementById('race')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="text-white/80 font-medium hover:text-white transition-colors cursor-pointer"
+          >
             The Race
           </a>
           <Link to="/schedule" className={`font-medium transition-colors ${location.pathname === '/schedule' ? 'text-accent' : 'text-white/80 hover:text-white'}`}>
             Schedule
           </Link>
-          <a href="/#faqs" className="text-white/80 font-medium hover:text-white transition-colors">
+          <a 
+            href="/#faqs" 
+            onClick={(e) => {
+              if (location.pathname === '/') {
+                e.preventDefault();
+                document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="text-white/80 font-medium hover:text-white transition-colors cursor-pointer"
+          >
             FAQs
           </a>
           <Link to="/contact" className={`font-medium transition-colors ${location.pathname === '/contact' ? 'text-accent' : 'text-white/80 hover:text-white'}`}>
