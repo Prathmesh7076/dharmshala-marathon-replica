@@ -2,7 +2,7 @@ import readyToRace from "@/assets/ready-to-race.jpg";
 
 const ReadyToRace = () => {
   return (
-    <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
       <img 
         src={readyToRace}
         alt="Ready to Race the Mountains"
