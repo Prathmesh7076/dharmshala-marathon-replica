@@ -75,7 +75,7 @@ const RaceDistances = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section id="race" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-4">
           <p className="text-accent-red font-bold text-lg mb-4 uppercase tracking-wider">
