@@ -12,11 +12,24 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 text-center">
-        <div className="bg-black/40 backdrop-blur-sm px-16 py-6 rounded-full">
-          <h2 className="text-white text-3xl md:text-4xl font-bold whitespace-nowrap">
-            Be Part of the Adventure
-          </h2>
-        </div>
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-wider leading-tight">
+          DHARAMSHALA<br />MARATHON 2025
+        </h1>
+        <p className="text-xl md:text-2xl text-white mb-10 font-medium max-w-3xl">
+          A High-Altitude Mountain Road Race in the<br />Shadow of the Dhauladhars
+        </p>
+        <button className="bg-white/30 backdrop-blur-md hover:bg-white/40 text-white font-bold px-16 py-5 text-xl rounded-full border border-white/30 transition-all">
+          Be Part of the Adventure
+        </button>
+      </div>
+
+      {/* Carousel Dots */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+        <div className="w-2 h-2 rounded-full bg-white/50"></div>
+        <div className="w-2 h-2 rounded-full bg-white/50"></div>
+        <div className="w-2 h-2 rounded-full bg-white/50"></div>
+        <div className="w-2 h-2 rounded-full bg-white/50"></div>
       </div>
 
       {/* Social Media Icons - Bottom Left */}
@@ -44,7 +57,7 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-white">
           <path d="M7 13L12 18L17 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M7 6L12 11L17 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
