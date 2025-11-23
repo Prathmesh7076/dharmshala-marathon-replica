@@ -5,6 +5,7 @@ import AboutRace from "@/components/AboutRace";
 import RaceDistances from "@/components/RaceDistances";
 import RouteMap from "@/components/RouteMap";
 import MarathonMotion from "@/components/MarathonMotion";
+import SchedulePreview from "@/components/SchedulePreview";
 import ReadyToRace from "@/components/ReadyToRace";
 import FAQ from "@/components/FAQ";
 import Sponsors from "@/components/Sponsors";
@@ -20,6 +21,7 @@ const Index = () => {
       <RaceDistances />
       <RouteMap />
       <MarathonMotion />
+      <SchedulePreview />
       <ReadyToRace />
       <FAQ />
       <Sponsors />
