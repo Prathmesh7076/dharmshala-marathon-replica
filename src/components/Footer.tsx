@@ -1,21 +1,16 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
-import socials from "@/assets/socials.png";
+import footerMountains from "@/assets/footer-mountains.png";
 
 const Footer = () => {
   return (
     <footer className="relative">
-      <div 
-        className="h-96 relative overflow-hidden"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        <div className="absolute bottom-8 left-8">
-          <img src={socials} alt="Social Media" className="w-32 h-auto" />
-        </div>
+      <div className="h-[100vh] relative overflow-hidden">
+        <img 
+          src={footerMountains}
+          alt="Mountain Landscape"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
       </div>
       
       <div className="bg-[#1a1a2e] text-white py-8">
