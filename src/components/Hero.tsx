@@ -12,7 +12,11 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 text-center">
-        {/* Image contains all text */}
+        <div className="bg-black/40 backdrop-blur-sm px-16 py-6 rounded-full">
+          <h2 className="text-white text-3xl md:text-4xl font-bold whitespace-nowrap">
+            Be Part of the Adventure
+          </h2>
+        </div>
       </div>
 
       {/* Social Media Icons - Bottom Left */}
