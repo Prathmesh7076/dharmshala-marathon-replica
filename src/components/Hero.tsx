@@ -12,12 +12,6 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 text-center">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-6 tracking-wider leading-tight">
-          DHARAMSHALA<br />MARATHON 2025
-        </h1>
-        <p className="text-xl md:text-2xl text-white mb-10 font-medium max-w-3xl">
-          A High-Altitude Mountain Road Race in the<br />Shadow of the Dhauladhars
-        </p>
         <button className="bg-white/30 backdrop-blur-md hover:bg-white/40 text-white font-bold px-16 py-5 text-xl rounded-full border border-white/30 transition-all">
           Be Part of the Adventure
         </button>
