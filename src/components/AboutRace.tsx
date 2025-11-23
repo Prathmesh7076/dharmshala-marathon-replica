@@ -5,7 +5,7 @@ import arrowDown from "@/assets/arrow-down.png";
 
 const AboutRace = () => {
   return (
-    <section id="about" className="bg-dark-bg py-20 relative overflow-hidden">
+    <section id="about" className="bg-dark-bg py-16 relative overflow-hidden pb-24">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: `url(${aboutImage})` }}
@@ -17,20 +17,20 @@ const AboutRace = () => {
             <img 
               src={raceImage}
               alt="Trail running in Dharamshala mountains"
-              className="w-full h-[600px] object-cover"
+              className="w-full h-[450px] object-cover"
             />
           </div>
 
           <div className="text-white">
-            <h2 className="text-6xl font-black mb-8 leading-tight">
+            <h2 className="text-5xl font-black mb-6 leading-tight">
               ABOUT THE RACE
             </h2>
             
-            <p className="text-xl text-white/90 mb-6 leading-relaxed">
+            <p className="text-lg text-white/90 mb-5 leading-relaxed">
               The Dharamshala Marathon is a high-altitude road/mountain hybrid event hosted by the Dharamshala District Administration and organised by <span className="font-bold">BigFoot Adventures India</span>.
             </p>
             
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-lg text-white/90 mb-6 leading-relaxed">
               The course runs through the scenic valleys, ridges, pine forests and rural settlements around Dharamshala & McLeod Ganj.
             </p>
 
