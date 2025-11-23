@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 
 const ReadyToRace = () => {
   return (
-    <section className="relative h-[120vh] flex items-center justify-end overflow-hidden">
+    <section className="relative h-[120vh] flex items-end justify-center overflow-hidden">
       <img 
         src={readyToRace}
         alt="Ready to Race the Mountains"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/20" />
-      <div className="relative z-10 text-center px-8 pb-24 w-full">
+      <div className="relative z-10 text-center px-8 pb-16 w-full">
         <Link to="/register">
           <Button 
             size="lg"
