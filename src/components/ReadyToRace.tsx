@@ -6,14 +6,17 @@ import arrowDown from "@/assets/arrow-down.png";
 
 const ReadyToRace = () => {
   return (
-    <section className="relative h-[120vh] flex items-end justify-center overflow-hidden">
+    <section className="relative h-[120vh] flex items-center justify-center overflow-hidden">
       <img 
         src={readyToRace}
         alt="Ready to Race the Mountains"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/20" />
-      <div className="relative z-10 text-center px-8 pb-32 w-full">
+      <div className="relative z-10 text-center px-8 w-full">
+        <h2 className="text-6xl md:text-7xl lg:text-8xl font-black text-white mb-12 leading-tight">
+          READY TO RACE<br />THE MOUNTAINS?
+        </h2>
         <Link to="/register">
           <Button 
             size="lg"
