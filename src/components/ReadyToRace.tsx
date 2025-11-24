@@ -5,8 +5,12 @@ import { ChevronDown } from "lucide-react";
 import arrowDown from "@/assets/arrow-down.png";
 
 const ReadyToRace = () => {
+  const scrollToNext = () => {
+    document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative h-[120vh] flex items-end justify-center overflow-hidden pb-32">
+    <section id="ready" className="relative h-[120vh] flex items-end justify-center overflow-hidden pb-32">
       <img 
         src={readyToRace}
         alt="Ready to Race the Mountains"
@@ -23,9 +27,13 @@ const ReadyToRace = () => {
           </Button>
         </Link>
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <button 
+        onClick={scrollToNext}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform"
+        aria-label="Scroll to next section"
+      >
         <img src={arrowDown} alt="Scroll down" className="w-16 h-16" />
-      </div>
+      </button>
     </section>
   );
 };

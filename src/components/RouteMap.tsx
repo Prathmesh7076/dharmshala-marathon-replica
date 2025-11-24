@@ -4,7 +4,7 @@ import { Share2, Download } from "lucide-react";
 
 const RouteMap = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="route" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-12">
           <p className="text-accent-red font-bold text-lg mb-4 uppercase tracking-wider">

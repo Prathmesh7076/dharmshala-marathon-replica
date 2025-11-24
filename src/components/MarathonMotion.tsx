@@ -3,7 +3,7 @@ import marathonMotion from "@/assets/marathon-motion.jpg";
 
 const MarathonMotion = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="motion" className="relative h-screen flex items-center justify-center overflow-hidden">
       <img 
         src={marathonMotion}
         alt="The Marathon in Motion"

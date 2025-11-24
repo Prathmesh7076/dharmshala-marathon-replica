@@ -4,6 +4,10 @@ import raceImage from "@/assets/DM-01.png";
 import arrowDown from "@/assets/arrow-down.png";
 
 const AboutRace = () => {
+  const scrollToNext = () => {
+    document.getElementById('race')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="about" className="bg-dark-bg py-16 relative overflow-hidden pb-24">
       <div 
@@ -52,9 +56,13 @@ const AboutRace = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <button 
+        onClick={scrollToNext}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer hover:scale-110 transition-transform"
+        aria-label="Scroll to next section"
+      >
         <img src={arrowDown} alt="Scroll down" className="w-16 h-16" />
-      </div>
+      </button>
     </section>
   );
 };

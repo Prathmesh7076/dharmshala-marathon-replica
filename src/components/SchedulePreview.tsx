@@ -1,6 +1,6 @@
 const SchedulePreview = () => {
   return (
-    <section className="bg-[#2D2942] py-20 px-8">
+    <section id="schedule" className="bg-[#2D2942] py-20 px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Race Essentials */}
