@@ -3,7 +3,7 @@ import footerMountains from "@/assets/footer-mountains.png";
 
 const Footer = () => {
   return (
-    <footer className="relative h-[100vh] overflow-hidden">
+    <footer id="footer" className="relative h-[100vh] overflow-hidden">
       <img 
         src={footerMountains}
         alt="Mountain Landscape"

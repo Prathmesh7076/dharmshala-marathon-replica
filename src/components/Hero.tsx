@@ -3,8 +3,12 @@ import { Facebook, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  const scrollToNext = () => {
+    document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-blue-900 overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-blue-900 overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -58,12 +62,16 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce">
+      <button 
+        onClick={scrollToNext}
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:scale-110 transition-transform"
+        aria-label="Scroll to next section"
+      >
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-white">
           <path d="M7 13L12 18L17 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M7 6L12 11L17 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-      </div>
+      </button>
     </section>
   );
 };
