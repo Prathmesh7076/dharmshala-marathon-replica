@@ -9,6 +9,20 @@ import React from "react";
 const RouteMap = () => {
   const [selectedDistance, setSelectedDistance] = React.useState("21km");
 
+  // Route IDs for different distances - you can update these with actual route IDs
+  const routeIds = {
+    "42km": "6654167483", // Update with actual 42km route ID
+    "21km": "6654167483", // Current route
+    "10km": "6654167483", // Update with actual 10km route ID
+    "5km": "6654167483",  // Update with actual 5km route ID
+    "3km": "6654167483"   // Update with actual 3km route ID
+  };
+
+  const getMapUrl = (distance: string) => {
+    const routeId = routeIds[distance as keyof typeof routeIds];
+    return `https://www.mapmyrun.com/routes/view/embedded/${routeId}?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=TERRAIN&show_marker_every=1&last_updated=2025-11-20T13:44:49+00:00`;
+  };
+
   const handleDownloadPDF = async () => {
     try {
       toast.loading("Generating PDF...");
@@ -105,15 +119,15 @@ const RouteMap = () => {
                 </div>
               </div>
               
-              <div className="bg-background/50 rounded-2xl overflow-hidden">
+              <div className="bg-background/50 rounded-2xl overflow-hidden" key={selectedDistance}>
                 <iframe 
                   id='mapmyfitness_route' 
-                  src='https://www.mapmyrun.com/routes/view/embedded/6654167483?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=TERRAIN&show_marker_every=1&last_updated=2025-11-20T13:44:49+00:00' 
+                  src={getMapUrl(selectedDistance)}
                   height='679px' 
                   width='100%' 
                   frameBorder='0'
                   className="w-full rounded-2xl"
-                  title="Dharamshala Marathon 2025 Route Map"
+                  title={`Dharamshala Marathon 2025 ${selectedDistance.toUpperCase()} Route Map`}
                 />
               </div>
 
