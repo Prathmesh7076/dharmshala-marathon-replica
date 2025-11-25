@@ -4,8 +4,11 @@ import { Share2, Download } from "lucide-react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { toast } from "sonner";
+import React from "react";
 
 const RouteMap = () => {
+  const [selectedDistance, setSelectedDistance] = React.useState("21km");
+
   const handleDownloadPDF = async () => {
     try {
       toast.loading("Generating PDF...");
@@ -53,6 +56,11 @@ const RouteMap = () => {
     const whatsappUrl = `https://wa.me/?text=${message}`;
     window.open(whatsappUrl, '_blank');
     toast.success("Opening WhatsApp...");
+  };
+
+  const handleDistanceChange = (distance: string) => {
+    setSelectedDistance(distance);
+    toast.success(`Viewing ${distance.toUpperCase()} route`);
   };
 
   return (
@@ -109,22 +117,64 @@ const RouteMap = () => {
                 />
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4 justify-end">
-                <Button 
-                  variant="outline" 
-                  className="gap-2"
-                  onClick={handleWhatsAppShare}
-                >
-                  <Share2 className="w-4 h-4" />
-                  Share on WhatsApp
-                </Button>
-                <Button 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold gap-2"
-                  onClick={handleDownloadPDF}
-                >
-                  <Download className="w-4 h-4" />
-                  Download PDF
-                </Button>
+              <div className="mt-8 flex flex-wrap gap-4 items-center">
+                <div className="flex flex-wrap gap-3">
+                  <Button 
+                    variant={selectedDistance === "42km" ? "default" : "outline"}
+                    className="font-bold"
+                    onClick={() => handleDistanceChange("42km")}
+                  >
+                    42 KM
+                  </Button>
+                  <Button 
+                    variant={selectedDistance === "21km" ? "default" : "outline"}
+                    className="font-bold"
+                    onClick={() => handleDistanceChange("21km")}
+                  >
+                    21 KM
+                  </Button>
+                  <Button 
+                    variant={selectedDistance === "10km" ? "default" : "outline"}
+                    className="font-bold"
+                    onClick={() => handleDistanceChange("10km")}
+                  >
+                    10 KM
+                  </Button>
+                  <Button 
+                    variant={selectedDistance === "5km" ? "default" : "outline"}
+                    className="font-bold"
+                    onClick={() => handleDistanceChange("5km")}
+                  >
+                    5 KM
+                  </Button>
+                  <Button 
+                    variant={selectedDistance === "3km" ? "default" : "outline"}
+                    className="font-bold"
+                    onClick={() => handleDistanceChange("3km")}
+                  >
+                    3 KM
+                  </Button>
+                </div>
+                
+                <div className="flex-1" />
+                
+                <div className="flex flex-wrap gap-3">
+                  <Button 
+                    variant="outline" 
+                    className="gap-2"
+                    onClick={handleWhatsAppShare}
+                  >
+                    <Share2 className="w-4 h-4" />
+                    Share on WhatsApp
+                  </Button>
+                  <Button 
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold gap-2"
+                    onClick={handleDownloadPDF}
+                  >
+                    <Download className="w-4 h-4" />
+                    Download PDF
+                  </Button>
+                </div>
               </div>
             </div>
           </TabsContent>
