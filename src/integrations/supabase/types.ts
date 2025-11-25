@@ -14,7 +14,83 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      runner_positions: {
+        Row: {
+          altitude: number | null
+          created_at: string | null
+          distance_covered: number | null
+          id: string
+          latitude: number
+          longitude: number
+          runner_id: string
+          speed: number | null
+          timestamp: string | null
+        }
+        Insert: {
+          altitude?: number | null
+          created_at?: string | null
+          distance_covered?: number | null
+          id?: string
+          latitude: number
+          longitude: number
+          runner_id: string
+          speed?: number | null
+          timestamp?: string | null
+        }
+        Update: {
+          altitude?: number | null
+          created_at?: string | null
+          distance_covered?: number | null
+          id?: string
+          latitude?: number
+          longitude?: number
+          runner_id?: string
+          speed?: number | null
+          timestamp?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "runner_positions_runner_id_fkey"
+            columns: ["runner_id"]
+            isOneToOne: false
+            referencedRelation: "runners"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      runners: {
+        Row: {
+          bib_number: string
+          created_at: string | null
+          finish_time: string | null
+          id: string
+          name: string
+          race_category: string
+          start_time: string | null
+          status: string | null
+        }
+        Insert: {
+          bib_number: string
+          created_at?: string | null
+          finish_time?: string | null
+          id?: string
+          name: string
+          race_category: string
+          start_time?: string | null
+          status?: string | null
+        }
+        Update: {
+          bib_number?: string
+          created_at?: string | null
+          finish_time?: string | null
+          id?: string
+          name?: string
+          race_category?: string
+          start_time?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

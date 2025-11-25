@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Schedule from "./pages/Schedule";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
+import LiveTracking from "./pages/LiveTracking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/live-tracking" element={<LiveTracking />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
