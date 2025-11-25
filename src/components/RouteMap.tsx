@@ -1,8 +1,60 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Share2, Download } from "lucide-react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import { toast } from "sonner";
 
 const RouteMap = () => {
+  const handleDownloadPDF = async () => {
+    try {
+      toast.loading("Generating PDF...");
+      
+      // Get the map container
+      const mapElement = document.getElementById('mapmyfitness_route');
+      if (!mapElement) {
+        toast.error("Map not found");
+        return;
+      }
+
+      // Create canvas from the map section
+      const canvas = await html2canvas(mapElement.parentElement as HTMLElement, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+      });
+
+      // Create PDF
+      const imgWidth = 210; // A4 width in mm
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      
+      const pdf = new jsPDF({
+        orientation: imgHeight > imgWidth ? 'portrait' : 'landscape',
+        unit: 'mm',
+        format: 'a4',
+      });
+
+      const imgData = canvas.toDataURL('image/png');
+      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      pdf.save('dharamshala-marathon-2025-route.pdf');
+      
+      toast.success("PDF downloaded successfully!");
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      toast.error("Failed to generate PDF. Please try again.");
+    }
+  };
+
+  const handleWhatsAppShare = () => {
+    const routeUrl = "https://www.mapmyrun.com/routes/view/6654167483";
+    const message = encodeURIComponent(
+      `Check out the Dharamshala Marathon 2025 route! 🏃‍♂️🏔️\n\n${routeUrl}`
+    );
+    const whatsappUrl = `https://wa.me/?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+    toast.success("Opening WhatsApp...");
+  };
+
   return (
     <section id="route" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-8">
@@ -58,11 +110,18 @@ const RouteMap = () => {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4 justify-end">
-                <Button variant="outline" className="gap-2">
+                <Button 
+                  variant="outline" 
+                  className="gap-2"
+                  onClick={handleWhatsAppShare}
+                >
                   <Share2 className="w-4 h-4" />
-                  Share
+                  Share on WhatsApp
                 </Button>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold gap-2">
+                <Button 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold gap-2"
+                  onClick={handleDownloadPDF}
+                >
                   <Download className="w-4 h-4" />
                   Download PDF
                 </Button>
