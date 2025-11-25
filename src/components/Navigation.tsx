@@ -43,6 +43,9 @@ const Navigation = () => {
           <Link to="/schedule" className={`font-medium transition-colors ${location.pathname === '/schedule' ? 'text-accent' : 'text-white/80 hover:text-white'}`}>
             Schedule
           </Link>
+          <Link to="/live-tracking" className={`font-medium transition-colors ${location.pathname === '/live-tracking' ? 'text-accent' : 'text-white/80 hover:text-white'}`}>
+            Live Tracking
+          </Link>
           <a 
             href="/#faqs" 
             onClick={(e) => {
