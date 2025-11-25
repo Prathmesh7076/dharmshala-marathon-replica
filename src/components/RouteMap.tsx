@@ -45,23 +45,19 @@ const RouteMap = () => {
                 </div>
               </div>
               
-              <div className="bg-background/50 rounded-2xl h-96 flex items-center justify-center text-muted-foreground">
-                <p className="text-xl">Interactive map placeholder - integrate with Mapbox or similar</p>
-              </div>
-              
-              <div className="mt-6 bg-background/50 rounded-2xl h-48 flex items-center justify-center text-muted-foreground">
-                <p className="text-lg">Elevation profile chart placeholder</p>
+              <div className="bg-background/50 rounded-2xl overflow-hidden">
+                <iframe 
+                  id='mapmyfitness_route' 
+                  src='https://www.mapmyrun.com/routes/view/embedded/6654167483?width=600&height=376&elevation=true&info=true&line_color=E61900DC&rgbhex=DC0019&distance_markers=0&unit_type=imperial&map_mode=TERRAIN&show_marker_every=1&last_updated=2025-11-20T13:44:49+00:00' 
+                  height='679px' 
+                  width='100%' 
+                  frameBorder='0'
+                  className="w-full rounded-2xl"
+                  title="Dharamshala Marathon 2025 Route Map"
+                />
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button variant="outline" className="font-bold">42 KM</Button>
-                <Button className="bg-primary text-primary-foreground font-bold">21 KM</Button>
-                <Button variant="outline" className="font-bold">10 KM</Button>
-                <Button variant="outline" className="font-bold">5 KM</Button>
-                <Button variant="outline" className="font-bold">3 KM</Button>
-                
-                <div className="flex-1" />
-                
+              <div className="mt-8 flex flex-wrap gap-4 justify-end">
                 <Button variant="outline" className="gap-2">
                   <Share2 className="w-4 h-4" />
                   Share
@@ -75,8 +71,8 @@ const RouteMap = () => {
           </TabsContent>
           
           <TabsContent value="profile">
-            <div className="bg-muted rounded-3xl p-8 h-96 flex items-center justify-center">
-              <p className="text-xl text-muted-foreground">Detailed elevation profile view</p>
+            <div className="bg-muted rounded-3xl p-8">
+              <p className="text-muted-foreground mb-4">The elevation profile is included in the map view above. Switch to the Map tab to see the complete route with elevation data.</p>
             </div>
           </TabsContent>
         </Tabs>
