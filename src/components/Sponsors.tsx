@@ -20,7 +20,7 @@ const Sponsors = () => {
           </div>
           
           <div className="flex-1">
-            <h2 className="text-5xl md:text-6xl font-black mb-6">SPONSORS</h2>
+            <h2 className="text-5xl md:text-6xl font-black mb-6">Hosted by</h2>
             <p className="text-lg text-muted-foreground">
               Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
               and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
