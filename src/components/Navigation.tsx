@@ -13,7 +13,7 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center gap-8 bg-primary/30 backdrop-blur-md px-8 py-3 rounded-full border border-white/20">
-          <Link to="/" className={`font-medium transition-colors ${location.pathname === '/' ? 'text-accent' : 'text-white hover:text-accent'}`}>
+          <Link to="/" className={`font-medium transition-all ${location.pathname === '/' ? 'text-accent font-bold' : 'text-white hover:text-accent hover:font-bold'}`}>
             Home
           </Link>
           <a 
@@ -24,7 +24,7 @@ const Navigation = () => {
                 document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="text-white/80 font-medium hover:text-white transition-colors cursor-pointer"
+            className="text-white/80 font-medium hover:text-white hover:font-bold transition-all cursor-pointer"
           >
             About
           </a>
@@ -36,11 +36,11 @@ const Navigation = () => {
                 document.getElementById('race')?.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="text-white/80 font-medium hover:text-white transition-colors cursor-pointer"
+            className="text-white/80 font-medium hover:text-white hover:font-bold transition-all cursor-pointer"
           >
             The Race
           </a>
-          <Link to="/schedule" className={`font-medium transition-colors ${location.pathname === '/schedule' ? 'text-accent' : 'text-white/80 hover:text-white'}`}>
+          <Link to="/schedule" className={`font-medium transition-all ${location.pathname === '/schedule' ? 'text-accent font-bold' : 'text-white/80 hover:text-white hover:font-bold'}`}>
             Schedule
           </Link>
           <a 
@@ -51,11 +51,11 @@ const Navigation = () => {
                 document.getElementById('faqs')?.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="text-white/80 font-medium hover:text-white transition-colors cursor-pointer"
+            className="text-white/80 font-medium hover:text-white hover:font-bold transition-all cursor-pointer"
           >
             FAQs
           </a>
-          <Link to="/contact" className={`font-medium transition-colors ${location.pathname === '/contact' ? 'text-accent' : 'text-white/80 hover:text-white'}`}>
+          <Link to="/contact" className={`font-medium transition-all ${location.pathname === '/contact' ? 'text-accent font-bold' : 'text-white/80 hover:text-white hover:font-bold'}`}>
             Contact Us
           </Link>
         </div>
