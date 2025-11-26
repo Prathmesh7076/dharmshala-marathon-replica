@@ -16,10 +16,26 @@ const Footer = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
       
-      <div className="absolute bottom-0 left-0 right-0 py-8">
+      {/* Footer Navigation */}
+      <div className="absolute bottom-32 left-0 right-0">
+        <div className="max-w-7xl mx-auto px-8">
+          <nav className="flex flex-wrap items-center justify-center md:justify-start gap-6 md:gap-8 text-white">
+            <a href="#about" className="hover:text-accent transition-colors">About Us</a>
+            <a href="#race" className="hover:text-accent transition-colors">Race</a>
+            <a href="#volunteer" className="hover:text-accent transition-colors">Volunteer</a>
+            <a href="#privacy" className="hover:text-accent transition-colors">Privacy</a>
+            <a href="#refund" className="hover:text-accent transition-colors">Refund</a>
+            <a href="#terms" className="hover:text-accent transition-colors">Terms</a>
+            <a href="/contact" className="hover:text-accent transition-colors">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="absolute bottom-8 left-0 right-0">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white">
-            © Dharamshala Marathon 2025 | Crafted by{" "}
+            © Copy Rights - Dharamshala Marathon 2025 | Crafted by{" "}
             <span className="text-accent font-bold">unScripters</span> in India
           </p>
           
@@ -55,12 +71,14 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Back to Top Button */}
       <button 
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 z-50 hover:scale-110 transition-transform cursor-pointer"
+        className="fixed bottom-12 right-12 z-50 flex flex-col items-center gap-2 hover:scale-110 transition-transform cursor-pointer group"
         aria-label="Back to top"
       >
-        <img src={backToTop} alt="Back to top" className="w-16 h-16" />
+        <img src={backToTop} alt="Back to top" className="w-20 h-20" />
+        <span className="text-white text-xs font-medium tracking-wider opacity-90 group-hover:opacity-100">BACK TO TOP</span>
       </button>
     </footer>
   );
