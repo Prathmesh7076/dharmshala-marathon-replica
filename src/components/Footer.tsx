@@ -1,7 +1,12 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import footerMountains from "@/assets/footer-mountains.png";
+import backToTop from "@/assets/back-to-top.png";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer id="footer" className="relative h-[100vh] overflow-hidden">
       <img 
@@ -14,7 +19,7 @@ const Footer = () => {
       <div className="absolute bottom-0 left-0 right-0 py-8">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white">
-            © Copy Rights - Dharamshala Marathon 2025 | Crafted by{" "}
+            © Dharamshala Marathon 2025 | Crafted by{" "}
             <span className="text-accent font-bold">unScripters</span> in India
           </p>
           
@@ -49,6 +54,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <button 
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 z-50 hover:scale-110 transition-transform cursor-pointer"
+        aria-label="Back to top"
+      >
+        <img src={backToTop} alt="Back to top" className="w-16 h-16" />
+      </button>
     </footer>
   );
 };
