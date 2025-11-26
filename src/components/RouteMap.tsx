@@ -112,10 +112,6 @@ const RouteMap = () => {
                     <p className="text-muted-foreground mb-1">Elevation Loss</p>
                     <p className="font-bold text-lg">496 m</p>
                   </div>
-                  <div>
-                    <p className="text-muted-foreground mb-1">Est. Moving Time</p>
-                    <p className="font-bold text-lg">2:18:51</p>
-                  </div>
                 </div>
               </div>
               

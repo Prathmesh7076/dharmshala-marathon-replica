@@ -23,7 +23,7 @@ const ReadyToRace = () => {
             size="lg"
             className="bg-white/80 hover:bg-white text-gray-800 font-bold text-xl px-12 py-8 h-auto rounded-full shadow-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105"
           >
-            Be Part of the Adventure
+            Register Now
           </Button>
         </Link>
       </div>
