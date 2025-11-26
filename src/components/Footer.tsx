@@ -1,8 +1,20 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { useState, useEffect } from "react";
 import footerMountains from "@/assets/footer-mountains.png";
 import backToTop from "@/assets/back-to-top.png";
 
 const Footer = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 900);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -72,13 +84,15 @@ const Footer = () => {
       </div>
 
       {/* Back to Top Button */}
-      <button 
-        onClick={scrollToTop}
-        className="fixed bottom-12 right-12 z-50 hover:scale-110 transition-transform cursor-pointer"
-        aria-label="Back to top"
-      >
-        <img src={backToTop} alt="Back to top" className="w-28 h-28" />
-      </button>
+      {showBackToTop && (
+        <button 
+          onClick={scrollToTop}
+          className="fixed bottom-12 right-12 z-50 hover:scale-110 transition-all duration-300 cursor-pointer animate-in fade-in slide-in-from-bottom-4"
+          aria-label="Back to top"
+        >
+          <img src={backToTop} alt="Back to top" className="w-28 h-28" />
+        </button>
+      )}
     </footer>
   );
 };
