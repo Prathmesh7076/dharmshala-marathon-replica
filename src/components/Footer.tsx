@@ -20,13 +20,13 @@ const Footer = () => {
       <div className="absolute bottom-32 left-0 right-0">
         <div className="max-w-7xl mx-auto px-8">
           <nav className="flex flex-wrap items-center justify-center md:justify-start gap-6 md:gap-8 text-white">
-            <a href="#about" className="hover:text-accent transition-colors">About Us</a>
-            <a href="#race" className="hover:text-accent transition-colors">Race</a>
-            <a href="#volunteer" className="hover:text-accent transition-colors">Volunteer</a>
-            <a href="#privacy" className="hover:text-accent transition-colors">Privacy</a>
-            <a href="#refund" className="hover:text-accent transition-colors">Refund</a>
-            <a href="#terms" className="hover:text-accent transition-colors">Terms</a>
-            <a href="/contact" className="hover:text-accent transition-colors">Contact Us</a>
+            <a href="#about" className="hover:text-accent hover:font-bold transition-all">About Us</a>
+            <a href="#race" className="hover:text-accent hover:font-bold transition-all">Race</a>
+            <a href="#volunteer" className="hover:text-accent hover:font-bold transition-all">Volunteer</a>
+            <a href="#privacy" className="hover:text-accent hover:font-bold transition-all">Privacy</a>
+            <a href="#refund" className="hover:text-accent hover:font-bold transition-all">Refund</a>
+            <a href="#terms" className="hover:text-accent hover:font-bold transition-all">Terms</a>
+            <a href="/contact" className="hover:text-accent hover:font-bold transition-all">Contact Us</a>
           </nav>
         </div>
       </div>
@@ -74,11 +74,10 @@ const Footer = () => {
       {/* Back to Top Button */}
       <button 
         onClick={scrollToTop}
-        className="fixed bottom-12 right-12 z-50 flex flex-col items-center gap-2 hover:scale-110 transition-transform cursor-pointer group"
+        className="fixed bottom-12 right-12 z-50 hover:scale-110 transition-transform cursor-pointer"
         aria-label="Back to top"
       >
-        <img src={backToTop} alt="Back to top" className="w-20 h-20" />
-        <span className="text-white text-xs font-medium tracking-wider opacity-90 group-hover:opacity-100">BACK TO TOP</span>
+        <img src={backToTop} alt="Back to top" className="w-28 h-28" />
       </button>
     </footer>
   );
